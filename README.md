@@ -18,6 +18,20 @@ or
 $ npm i -g depen
 ```
 
+## Usage
+
+```js
+var depen = require('depen');
+
+depen('./', function (err, dependencies) {
+  if (err) {
+    throw err;
+  }
+
+  console.log(dependencies);
+});
+```
+
 ## CLI
 
 ```sh
