@@ -37,7 +37,7 @@ depen('./', function (err, dependencies) {
 ## CLI
 
 ```sh
-$ depen [target project]
+$ depen [-r] [target project]
 ```
 
 
