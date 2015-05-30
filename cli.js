@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-var
-  fs = require('fs'),
+var fs = require('fs'),
   meow = require('meow'),
   chalk = require('chalk'),
   figures = require('figures'),
@@ -13,6 +12,7 @@ var cli = meow({
     ' $ depen [-r] [project dir]'
   ].join('\n')
 });
+
 
 function printDeps (root, indent, shiftwidth) {
 
@@ -44,4 +44,4 @@ function printDeps (root, indent, shiftwidth) {
 
 }
 
-printDeps(cli.input[0]||'.', '   ', 0);
+printDeps(cli.input[0] || '.', '   ', 0);
