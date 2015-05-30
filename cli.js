@@ -18,7 +18,7 @@ function printDeps (root, indent, shiftwidth) {
 
   depen(root, function (err, dependencies) {
     if (err) {
-      console.log(err);
+      throw err;
     }
 
     dependencies.dependency.forEach(function (dep) {

@@ -58,8 +58,13 @@ function getDeps (pkgJSON, dir) {
 
 
 module.exports = function (targetDir, cb) {
-  var dir = targetDir ? path.resolve(targetDir) : path.resolve(process.cwd()),
-    pkg = require(path.resolve(dir, 'package.json'));
+  var dir = targetDir ? path.resolve(targetDir) : path.resolve(process.cwd());
+
+  if (!fs.existsSync(path.resolve(dir, 'package.json'))) {
+    cb(new Error('package.json is not found!'));
+  }
+
+  var pkg = require(path.resolve(dir, 'package.json'));
 
   cb(null, getDeps(pkg, dir));
 };
