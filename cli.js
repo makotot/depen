@@ -22,12 +22,12 @@ function printDeps (root, indent, shiftwidth) {
     }
 
     dependencies.dependency.forEach(function (dep) {
-      var offset = Array(shiftwidth).join('  ');
+      var offset = Array(shiftwidth).join(' ');
 
       console.log(offset + figures.pointer, chalk.white.underline(dep.type));
 
       dep.package.forEach(function (package) {
-        console.log(offset + indent, chalk.cyan(package.name), chalk.yellow(package.version));
+        console.log(offset + indent, chalk.blue(package.name), chalk.yellow(package.version));
         console.log(offset + indent + indent, chalk.gray(package.description ? package.description : '---'), chalk.magenta(package.homepage ? package.homepage : '---'));
 
         if (cli.flags['r']) {
@@ -44,4 +44,4 @@ function printDeps (root, indent, shiftwidth) {
 
 }
 
-printDeps(cli.input[0] || '.', '   ', 0);
+printDeps(cli.input[0] || '.', '  ', 0);
