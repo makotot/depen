@@ -27,7 +27,7 @@ function printDeps (root, indent, shiftwidth) {
       console.log(offset + figures.pointer, chalk.white.underline(dep.type));
 
       dep.package.forEach(function (package) {
-        console.log(offset + indent, chalk.blue(package.name), chalk.yellow(package.version));
+        console.log(offset + indent, chalk.cyan(package.name), chalk.yellow(package.version));
         console.log(offset + indent + indent, chalk.gray(package.description ? package.description : '---'), chalk.magenta(package.homepage ? package.homepage : '---'));
 
         if (cli.flags['r']) {
