@@ -1,6 +1,6 @@
 {
   "name": "depen",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Get the infomation of dependencies in the project.",
   "main": "index.js",
   "bin": {
