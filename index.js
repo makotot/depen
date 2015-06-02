@@ -42,7 +42,7 @@ function getDeps (pkgJSON, dir) {
   var name = pkgJSON.name,
     depsList = createDepsList(pkgJSON);
 
-  var dep = _.map(depsList, function (dependepncy) {
+  var deps = _.map(depsList, function (dependepncy) {
     return {
       type: dependepncy,
       package: getDepPkgJSON(dependepncy, dir, pkgJSON)
@@ -52,7 +52,9 @@ function getDeps (pkgJSON, dir) {
   return {
     name: name,
     path: path.resolve(dir),
-    dependency: dep
+    dependency: _.remove(deps, function (dep) {
+      return dep.package.length;
+    })
   };
 }
 
