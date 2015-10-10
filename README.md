@@ -1,7 +1,7 @@
 # Depen
 
-[![npm version](http://img.shields.io/npm/v/depen.svg?style=flat-square)](https://github.com/makotot/depen)
-[![travis](http://img.shields.io/travis/makotot/depen.svg?style=flat-square)](https://github.com/makotot/depen)
+[![npm version](http://img.shields.io/npm/v/depen.svg?style=flat-square)](https://www.npmjs.com/package/depen)
+[![travis](http://img.shields.io/travis/makotot/depen.svg?style=flat-square)](https://travis-ci.org/makotot/depen)
 [![dependencies](http://img.shields.io/david/makotot/depen.svg?style=flat-square)](https://github.com/makotot/depen)
 [![devDependencies](http://img.shields.io/david/dev/makotot/depen.svg?style=flat-square)](https://github.com/makotot/depen)
 [![License](http://img.shields.io/npm/l/depen.svg?style=flat-square)](https://github.com/makotot/depen)
